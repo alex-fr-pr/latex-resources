@@ -1,0 +1,99 @@
+% For enumerating stuff better (roman letters etc.)
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% For enumerating cases
+\usepackage{cases}
+
+% For Category theory diagrams
+\usepackage{tikz}
+\usepackage{tikz-cd}
+% Added for plotting coordinate charts with tikz
+\usepackage{pgfplots}
+
+% For 3d plots
+\usepackage{tikz-3dplot}
+
+
+\usetikzlibrary{matrix,arrows,backgrounds}
+\usetikzlibrary{bayesnet}
+
+% Added for neural networks (the above three is also needed for neural networks)
+\usetikzlibrary{chains,positioning,decorations.pathreplacing}
+
+% Added for plotting coordinate charts with tikz
+% \usepgfplotslibrary{patchplots}
+% Settings for pgfplot?
+\pgfplotsset{compat=1.15}
+
+% Computing the center of mass (mean) in a tikz picture
+\usetikzlibrary{calc}
+
+
+% No par indent?
+\parindent=0pt
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+% Norm
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+% Inner product
+\newcommand{\ip}[1]{\langle#1\rangle}
+
+
+\newcommand{\restrict}[1]{\raisebox{-.5ex}{$|$}_{#1}}
+
+% \newcommand{\gammadot}[1]{\dot{\gamma}\raisebox{-.6ex}{$|$}_{#1}}
+\newcommand{\gammadot}[2][]{\dot{\gamma}_{#1}\raisebox{-.6ex}{$|$}_{#2}}
+% Example use: \gammadot[i]{t_0} where i gets binded to #1 and t_0 to #2
+% Example use without optional argument \gammadot{t_0} where t_0 gets binded to #2
+
+% Double lined math. symbols
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\K}{\mathbb{K}}
+
+% For stochastic variables
+\newcommand{\X}{\mathbb{X}}
+
+% Caligrapfic / scripted math. symbols
+\newcommand{\sM}{\mathcal{M}}
+\newcommand{\sV}{\mathcal{V}}
+
+
+\newcommand{\q}{q_{\eps}}
+
+
+% Greek letters
+\newcommand{\eps}{\varepsilon}
+
+
+\newtheoremstyle{break}% name
+  {}%         Space above, empty = `usual value'
+  {}%         Space below
+  {\itshape}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {\newline}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+
+\theoremstyle{break}
+
+
+% Increase spacing between lines in align environment (possibly other places too)
+\setlength{\jot}{12pt}
+
+
+% Comes from the ku-frontpage package
+\setlength\arraycolsep{2 pt}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{0}
